@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "play flexbox",
+    "description": "preview flexbox effect and copy style",
+    "version": "0.125",
+
+    "browser_action": {
+        "default_icon": "animate.png",
+        "default_title": "Play Flexbox",
+        "default_popup": "pop.html"
+    },
+    "icons": {
+        "16": "animate.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "file:///*/*"
+        ],
+        "css": ["mystique.css"]
+    }],
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "tabs",
+        "http://*/*",
+        "file:///*/*"
+    ]
+}
